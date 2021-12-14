@@ -8,7 +8,7 @@ import java.io.IOException;
 public class MainMenuController {
     
     public static void main(String[] args)throws IOException {
-    
+    LoginController.loadAccounts();
         LoadStock.loadStock();
         LoadStock.writeToRecord();
         LoginScreen.displayLogin();

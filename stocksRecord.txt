@@ -2,4 +2,5 @@
 1,Glorious,GMMK Pro,128.53,25
 2,Royal Kludge,RK84,60.29,22
 3,Mode,Mode80,346.99,5
+4,Keychron,K8,52.15,51
 5,Keychron,Q1,127.73,1
