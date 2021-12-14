@@ -1,0 +1,5 @@
+0,Royal Kludge,RK84 Pro,90.44,12
+1,Glorious,GMMK Pro,128.53,25
+2,Royal Kludge,RK84,60.29,22
+3,Mode,Mode80,346.99,5
+5,Keychron,Q1,127.73,1
