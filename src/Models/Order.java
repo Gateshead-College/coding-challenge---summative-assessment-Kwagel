@@ -6,13 +6,13 @@ import StockFunctions.LoadStock;
 import java.util.ArrayList;
 
 public class Order {
-    private int customerID;
-    private ArrayList<OrderItem> orderItems;
+    private final int customerID;
+    private final ArrayList<OrderItem> orderItems;
     private double totalCost;
     
     public Order(int customerID) {
         this.customerID = OrdersMenuController.getCustomers().get(customerID).getAccountNumber();
-        this.orderItems = new ArrayList<OrderItem>();
+        this.orderItems = new ArrayList<>();
         this.totalCost = 0;
     }
     
@@ -50,17 +50,11 @@ public class Order {
         return orderItems;
     }
     
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
-    }
-    
     public void addOrderItems(OrderItem orderItems) {
         this.orderItems.add(orderItems);
         calculateCost();
     }
     
-    public void setTotalCost(int totalCost) {
-        this.totalCost = totalCost;
-    }
+
     
 }

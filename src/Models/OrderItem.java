@@ -1,10 +1,10 @@
 package Models;
-import MenusAndControllers.MainMenuController;
+
 import StockFunctions.LoadStock;
 
 public class OrderItem {
-    private int ProductID;
-    private int Quantity;
+    private final int ProductID;
+    private final int Quantity;
     
     public OrderItem(int productID, int quantity) {
         ProductID = productID;

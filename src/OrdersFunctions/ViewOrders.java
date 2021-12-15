@@ -1,9 +1,12 @@
 package OrdersFunctions;
 
 import MenusAndControllers.OrdersMenuController;
+import MenusAndControllers.OrdersMenuView;
 import Models.Order;
 import Models.OrderItem;
+import StockFunctions.Colours;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class ViewOrders {
@@ -11,13 +14,22 @@ public class ViewOrders {
     for (int i = 0 ; i< OrdersMenuController.getOrders().size();i++){
         System.out.println("OrderID: " +(i+1)+ " Customer Name: " + OrdersMenuController.getOrders().get(i).getCustomerName() + " Total Cost: " + OrdersMenuController.getOrders().get(i).getTotalCost());
     }
+        System.out.println(OrdersMenuController.getOrders().size() + " - Exit");
+        try {
+            parseOrderSelection();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
-    public static void parseOrderSelection(){
-        System.out.println("Please input an OrderID to view it in more detail...");
+    public static void parseOrderSelection() throws IOException {
+        System.out.println(Colours.ANSI_RED + "Please input an OrderID to view it in more detail...");
         int choice = Integer.parseInt(new Scanner(System.in).nextLine());
-                if (choice <= OrdersMenuController.getOrders().size()){
+                if (choice <= OrdersMenuController.getOrders().size()-1){
                     viewOrder(choice-1);
+                }else if (choice == OrdersMenuController.getOrders().size()){
+                    System.out.println(Colours.ANSI_RED + "Returning to Orders Menu...");
+//                    OrdersMenuView.displayOrdersMenu();
                 }
     }
     public static void viewOrder(int index){

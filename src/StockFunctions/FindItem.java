@@ -1,10 +1,9 @@
 package StockFunctions;
 
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class FindItem {
-    public static int findItem() throws FileNotFoundException {
+    public static int findItem()  {
         System.out.println(Colours.ANSI_BLACK + "FindItem.findItem() called. Finding item...." + Colours.ANSI_RESET);
         int choice = Integer.parseInt(new Scanner(System.in).nextLine());
         if (choice < LoadStock.stocks.size() && choice >= 0) {

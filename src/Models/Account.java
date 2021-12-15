@@ -8,7 +8,7 @@ public class Account {
     private String forename;
     private String surname;
     private int employeeID;
-    private boolean isAdmin;
+    private final boolean isAdmin;
  
     
     public Account(String username, String password, String forename, String surname,  boolean isAdmin) {
@@ -73,8 +73,6 @@ public class Account {
         this.employeeID = employeeID;
     }
     
-    public void setAdmin(boolean admin) {
-        isAdmin = admin;
-    }
+
     
 }

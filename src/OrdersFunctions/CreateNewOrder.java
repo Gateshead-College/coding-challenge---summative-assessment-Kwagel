@@ -6,6 +6,7 @@ import Models.OrderItem;
 import Models.Stock;
 import StockFunctions.Colours;
 import StockFunctions.LoadStock;
+import StockFunctions.ViewStock;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -28,14 +29,12 @@ public class CreateNewOrder {
             parseOrderDetails();
             
         }
-        
     }
     
     public static int parseCustomerID(int customerID) {
         if (customerID <= OrdersMenuController.getCustomers().size() - 1 && customerID >= 0) {
             return customerID;
         }
-        
         return -1;
     }
     
@@ -43,21 +42,23 @@ public class CreateNewOrder {
         Scanner scanner = new Scanner(System.in);
         String moreProducts;
         do {
-            System.out.println(Colours.ANSI_RED + "Please input Product ID");
+            ViewStock.displayStocks();
+            System.out.println(Colours.ANSI_RED + "Please input Product ID..");
             int productID = Integer.parseInt(scanner.nextLine());
             while(!Stock.checkProductID(productID)){
                 System.out.println("Product doesn't exist, please try again");
                 productID = Integer.parseInt(scanner.nextLine());;
             }
-            
+            System.out.println("You selected the " + LoadStock.getStocks().get( Stock.getIndex("ID",  Integer.toString(productID))).getName()+ ": ");
+            ViewStock.printStock(productID);
             System.out.println("Please input amount bought...");
             int quantity = Integer.parseInt(scanner.nextLine());
             while(!Stock.checkQuantity(productID, quantity)){
                 System.out.println("We don't have that many in stock, please try again...");
                 quantity = Integer.parseInt(scanner.nextLine());;
-            }
+            }   System.out.println("You ordered " + quantity + " of " + LoadStock.getStocks().get( Stock.getIndex("ID",  Integer.toString(productID))).getQuantity() + " available...");
             OrdersMenuController.getOrders().get(currentOrderIndex).addOrderItems(new OrderItem(productID, quantity));
-            System.out.println("Added items...");
+            System.out.println("Added items!");
             System.out.println("Do you still have more products? (y/n)" + Colours.ANSI_RESET);
             moreProducts = scanner.nextLine();
         } while (moreProducts.equals("y"));

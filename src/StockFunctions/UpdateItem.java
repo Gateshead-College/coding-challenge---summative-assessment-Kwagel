@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class UpdateItem {
-    public static void updateItem() throws IOException {
+    public static void updateItem()  {
         System.out.println(Colours.ANSI_BLACK + "UpdateItem.updateItem() called. Printing stock..." + Colours.ANSI_RESET);
         ViewStock.displayStocks();
         System.out.println(Colours.ANSI_RED + "Which item do you want to update?");

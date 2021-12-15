@@ -28,12 +28,14 @@ public class LoadStock {
         stocks.add(new Stock("Keychron", "Q1", 127.73, 1));
     }
     
-    public static void writeToRecord() throws IOException {
+    public static void writeToRecord()  {
         System.out.println(Colours.ANSI_BLACK + "LoadStock.writeToRecord() called. Loading initial stock..." + Colours.ANSI_RESET);
         try (BufferedWriter stockRecord = new BufferedWriter(new FileWriter("C:\\Users\\kenneth.a.lau\\IdeaProjects\\JavaLearning\\KeksKeebs\\stocksRecord.txt"))) {
             for (Stock s : stocks) {
                 stockRecord.write(s.getProductID() + "," + s.getManufacturer() + "," + s.getName() + "," + s.getPrice() + "," + s.getQuantity() + "\n");
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
   

@@ -3,7 +3,7 @@ package StockFunctions;
 import java.io.IOException;
 
 public class RemoveItem {
-    public static void removeItem() throws IOException {
+    public static void removeItem()  {
         System.out.println(Colours.ANSI_BLACK + "RemoveItem.removeItem() called. Remove item..." + Colours.ANSI_RESET);
         System.out.println(Colours.ANSI_RED + "Which item would you like to remove from stock?" + Colours.ANSI_RESET);
         int ItemToRemove = FindItem.findItem();

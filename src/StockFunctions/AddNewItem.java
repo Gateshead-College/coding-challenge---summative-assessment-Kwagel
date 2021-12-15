@@ -2,11 +2,10 @@ package StockFunctions;
 
 import Models.Stock;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class AddNewItem {
-    public static void addItem() throws IOException {
+    public static void addItem() {
         System.out.println(Colours.ANSI_BLACK + "AddNewItem.addItem() called. Printing stock..." + Colours.ANSI_RESET);
         Scanner scanner = new Scanner(System.in);
         System.out.println(Colours.ANSI_RED + "Please input manufacturer...");

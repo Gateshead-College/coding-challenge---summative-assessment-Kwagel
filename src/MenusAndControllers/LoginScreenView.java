@@ -15,13 +15,13 @@ public class LoginScreenView {
         System.out.println("_____________________________" + Colours.ANSI_RESET);
         String username = new Scanner(System.in).nextLine();
         String password = new Scanner(System.in).nextLine();
-        if (LoginController.checkLogin(username,password)) {
-            System.out.println("Login successful...");
-            System.out.println("Loading main menu...");
+        if (LoginController.checkLogin(username, password)) {
+            System.out.println(Colours.ANSI_RED + "Login successful...");
+            System.out.println(Colours.ANSI_RED + "Loading main menu...");
             MainMenuView.displayMenu();
         } else {
-            System.out.println("Wrong password...");
-            System.out.println("Please try again");
+            System.out.println(Colours.ANSI_RED + "Wrong password...");
+            System.out.println(Colours.ANSI_RED + "Please try again");
             displayLogin();
         }
     }

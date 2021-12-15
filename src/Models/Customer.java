@@ -1,6 +1,5 @@
 package Models;
 
-import MenusAndControllers.OrdersMenuController;
 
 public class Customer {
      String name;
@@ -16,13 +15,7 @@ public class Customer {
           Telephone = telephone;
           Address = address;
      }
-     public Customer(String name, String email, String telephone, String address) {
-          this.name = name;
-          this.accountNumber = OrdersMenuController.getCustomers().size();
-          this.email = email;
-          Telephone = telephone;
-          Address = address;
-     }
+   
      
      public String getName() {
           return name;
@@ -32,16 +25,5 @@ public class Customer {
           return accountNumber;
      }
      
-     public String getEmail() {
-          return email;
-     }
-     
-     public String getTelephone() {
-          return Telephone;
-     }
-     
-     public String getAddress() {
-          return Address;
-     }
-     
+ 
 }

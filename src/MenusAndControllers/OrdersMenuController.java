@@ -27,7 +27,7 @@ public class OrdersMenuController {
     public static void loadOrdersMenu() throws IOException {
         LoadCustomers.loadCustomers();
         displayOrdersMenu();
-        parseOrderMenuChoice();
+        
     }
     public static void parseOrderMenuChoice() throws IOException {
         System.out.println(Colours.ANSI_RED + "Please choice an option..." + Colours.ANSI_RESET);
@@ -35,20 +35,17 @@ public class OrdersMenuController {
             case 1:
                 CreateNewOrder.createNewOrder();
                 displayOrdersMenu();
-                parseOrderMenuChoice();
                 break;
             case 2:
                 ViewOrders.viewOrders();
-                ViewOrders.parseOrderSelection();
                 displayOrdersMenu();
-                parseOrderMenuChoice();
                 break;
             case 3:
                 MainMenuView.displayMenu();
             default:
                 System.out.println("Invalid input, please try again...");
                 displayOrdersMenu();
-                parseOrderMenuChoice();
+               
         }
     }
 }
