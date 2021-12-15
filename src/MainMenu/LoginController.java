@@ -20,9 +20,10 @@ public class LoginController {
     
  
     public static void loadAccounts() throws IOException {
-        accounts.add(new Account("ken","pass", "kenneth","lau", true));
-        accounts.add(new Account("bob","pass1", "bob","markely", true));
-        accounts.add(new Account("sid","pass2", "sid","sloth", false));
+//        accounts.add(new Account("ken","pass", "kenneth","lau", true));
+//        accounts.add(new Account("bob","pass1", "bob","markely", true));
+//        accounts.add(new Account("sid","pass2", "sid","sloth", false));
+        LoadAccounts.loadAccounts();
         LoadAccounts.saveAccounts();
     }
     

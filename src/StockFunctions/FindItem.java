@@ -1,6 +1,4 @@
-package Functions;
-
-import Models.Stock;
+package StockFunctions;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;

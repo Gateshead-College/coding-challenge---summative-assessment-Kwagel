@@ -1,8 +1,8 @@
 package MainMenu;
 
-import Functions.*;
+import AccountFunctions.ViewAccount;
+import StockFunctions.*;
 
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class MainMenuController {
@@ -29,7 +29,9 @@ public class MainMenuController {
                 RemoveItem.removeItem();
                 MainMenuView.displayMenu();
             case 5:
-            
+                ViewAccount.viewAccount(ViewAccount.getCurrentAccountIndex());
+                ViewAccount.viewAccountSettings();
+                ViewAccount.parseAccountChoice(ViewAccount.getCurrentAccountIndex());
         }
     }
     

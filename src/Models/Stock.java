@@ -1,8 +1,7 @@
 package Models;
 
-import Functions.Colours;
-import Functions.LoadStock;
-import MainMenu.LoginController;
+import StockFunctions.Colours;
+import StockFunctions.LoadStock;
 
 public class Stock {
     

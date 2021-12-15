@@ -20,6 +20,15 @@ public class Account {
         this.isAdmin = isAdmin;
     }
     
+    public Account(String username, String password, String forename, String surname, int employeeID, boolean isAdmin) {
+        this.username = username;
+        this.password = password;
+        this.forename = forename;
+        this.surname = surname;
+        this.employeeID = employeeID;
+        this.isAdmin = isAdmin;
+    }
+    
     public String getUsername() {
         return username;
     }

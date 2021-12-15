@@ -1,6 +1,6 @@
 package MainMenu;
 
-import Functions.Colours;
+import StockFunctions.Colours;
 
 import java.io.IOException;
 import java.util.Scanner;
