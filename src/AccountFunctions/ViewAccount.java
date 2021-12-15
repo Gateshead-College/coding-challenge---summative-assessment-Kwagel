@@ -2,8 +2,8 @@ package AccountFunctions;
 
 import Models.Account;
 import StockFunctions.Colours;
-import MainMenu.LoginController;
-import MainMenu.MainMenuView;
+import MenusAndControllers.LoginController;
+import MenusAndControllers.MainMenuView;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -72,6 +72,7 @@ public class ViewAccount {
                 System.out.println("Invalid Input...");
                 viewAccountSettings();
         }
+        LoadAccounts.saveAccounts();
     }
     
     public static int viewAllAccounts() {

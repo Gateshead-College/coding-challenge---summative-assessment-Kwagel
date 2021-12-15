@@ -1,6 +1,6 @@
 package AccountFunctions;
 
-import MainMenu.LoginController;
+import MenusAndControllers.LoginController;
 import Models.Account;
 
 import java.io.*;

@@ -1,4 +1,4 @@
-package MainMenu;
+package MenusAndControllers;
 
 import AccountFunctions.LoadAccounts;
 import Models.Account;

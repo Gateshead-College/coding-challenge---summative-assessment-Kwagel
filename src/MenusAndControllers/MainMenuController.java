@@ -1,4 +1,4 @@
-package MainMenu;
+package MenusAndControllers;
 
 import AccountFunctions.ViewAccount;
 import StockFunctions.*;
@@ -11,7 +11,7 @@ public class MainMenuController {
     LoginController.loadAccounts();
         LoadStock.loadStock();
         LoadStock.writeToRecord();
-        LoginScreen.displayLogin();
+        LoginScreenView.displayLogin();
     }
     
     public void parseChoice(int choice) throws IOException {
@@ -29,9 +29,12 @@ public class MainMenuController {
                 RemoveItem.removeItem();
                 MainMenuView.displayMenu();
             case 5:
+                OrdersMenuController.loadOrdersMenu();
+            case 6:
                 ViewAccount.viewAccount(ViewAccount.getCurrentAccountIndex());
                 ViewAccount.viewAccountSettings();
                 ViewAccount.parseAccountChoice(ViewAccount.getCurrentAccountIndex());
+                MainMenuView.displayMenu();
         }
     }
     

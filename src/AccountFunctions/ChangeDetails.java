@@ -1,7 +1,6 @@
 package AccountFunctions;
 
 import StockFunctions.Colours;
-import MainMenu.LoginController;
 
 import java.util.Scanner;
 

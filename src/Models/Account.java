@@ -1,6 +1,6 @@
 package Models;
 
-import MainMenu.LoginController;
+import MenusAndControllers.LoginController;
 
 public class Account {
     private String username;

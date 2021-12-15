@@ -1,11 +1,11 @@
-package MainMenu;
+package MenusAndControllers;
 
 import StockFunctions.Colours;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class LoginScreen {
+public class LoginScreenView {
     
     public static void displayLogin() throws IOException {
         LoginController.loadAccounts();

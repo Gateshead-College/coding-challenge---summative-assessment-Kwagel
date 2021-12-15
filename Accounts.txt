@@ -1,3 +1,3 @@
 ken,pass,kenneth,lau,0,true
-bob,pass1,bob,markely,1,true
+bob,pass1,bob,marley,1,true
 sid,pass2,sid,sloth,2,false

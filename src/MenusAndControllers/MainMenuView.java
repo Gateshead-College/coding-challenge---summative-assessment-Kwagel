@@ -1,4 +1,4 @@
-package MainMenu;
+package MenusAndControllers;
 
 import StockFunctions.Colours;
 
@@ -15,7 +15,8 @@ public class MainMenuView {
         System.out.println( "2 - Update Stock" );
         System.out.println( "3 - Add New Stock" );
         System.out.println( "4 - Remove Stock" );
-        System.out.println( "5 - Current Account Settings" );
+        System.out.println("5 - Orders");
+        System.out.println( "6 - Current Account Settings" );
         System.out.println(Colours.ANSI_RED + "Please choose an option..." +  Colours.ANSI_RESET);
         MainMenuController mmc = new MainMenuController();
         mmc.parseChoice(Integer.parseInt(new Scanner(System.in).nextLine()));
