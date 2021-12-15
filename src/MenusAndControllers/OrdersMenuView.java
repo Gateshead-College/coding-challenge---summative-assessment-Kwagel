@@ -1,6 +1,7 @@
 package MenusAndControllers;
 
 import OrdersFunctions.CreateNewOrder;
+import OrdersFunctions.ViewOrders;
 import StockFunctions.Colours;
 
 import java.io.IOException;
@@ -15,18 +16,6 @@ public class OrdersMenuView {
         System.out.println("3 - Return to Main Menu" + Colours.ANSI_RESET);
     }
     
-    public static void parseOrderMenuChoice() throws IOException {
-        System.out.println(Colours.ANSI_RED + "Please choice an option..." + Colours.ANSI_RESET);
-        switch (new Scanner(System.in).nextLine()) {
-            case 1:
-                CreateNewOrder.createNewOrder();
-                break;
-            case 2:
-                ViewOrders.viewOrders();
-                break;
-            case 3:
-                MainMenuView.displayMenu();
-        }
-    }
+   
     
 }

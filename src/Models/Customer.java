@@ -24,4 +24,24 @@ public class Customer {
           Address = address;
      }
      
+     public String getName() {
+          return name;
+     }
+     
+     public int getAccountNumber() {
+          return accountNumber;
+     }
+     
+     public String getEmail() {
+          return email;
+     }
+     
+     public String getTelephone() {
+          return Telephone;
+     }
+     
+     public String getAddress() {
+          return Address;
+     }
+     
 }

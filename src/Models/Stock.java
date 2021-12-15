@@ -19,7 +19,22 @@ public class Stock {
         this.price = price;
         this.numberInStock = numberInStock;
     }
-    
+    public static boolean checkProductID(int productID){
+        for (Stock s: LoadStock.getStocks()){
+            if (s.getProductID() == productID){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean checkQuantity(int productID ,int quantity){
+        for (Stock s: LoadStock.getStocks()){
+            if (s.getProductID() == productID && s.getQuantity() >= quantity){
+                return true;
+            }
+        }
+        return false;
+    }
     public int getProductID() {
         return ProductID;
     }
