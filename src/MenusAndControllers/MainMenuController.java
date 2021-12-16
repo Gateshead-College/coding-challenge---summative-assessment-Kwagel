@@ -23,18 +23,16 @@ public class MainMenuController {
         switch (choice) {
             case 1:
                 StocksMenuController.callStocksMenu();
-                MainMenuView.displayMenu();
                 break;
             case 2:
                 OrdersMenuController.callOrdersMenu();
-                MainMenuView.displayMenu();
                 break;
             case 3:
                 AccountsMenuController.callAccountsMenu();
-                MainMenuView.displayMenu();
                 break;
             case 0:
                 System.out.println("Exiting...");
+                break;
             default:
                 System.out.println("Invalid choice, please try again...");
                 MainMenuView.displayMenu();

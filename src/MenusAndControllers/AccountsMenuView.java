@@ -39,6 +39,7 @@ public class AccountsMenuView {
         } else {
 //            otherwise, just directly print out own account information
             ViewAccount.viewAccount(AccountsMenuController.currentAccountIndex);
+            AccountsMenuController.parseAccountMenuChoice(AccountsMenuController.currentAccountIndex);
         }
     }
     
