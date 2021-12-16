@@ -1,5 +1,6 @@
 package AccountFunctions;
 
+import MenusAndControllers.Colours;
 import MenusAndControllers.LoginController;
 import Models.Account;
 
@@ -8,6 +9,7 @@ import java.util.Scanner;
 
 public class LoadAccounts {
     public static void loadAccounts()  {
+        System.out.println(Colours.ANSI_BLACK + "LoadAccounts.loadAccounts() called. ");
         try (Scanner scanner = new Scanner(new BufferedReader(new FileReader("C:\\Users\\kenneth.a.lau\\IdeaProjects\\JavaLearning\\KeksKeebs\\Accounts.txt")))) {
             LoginController.getAccounts().removeAll(LoginController.getAccounts());
             while (scanner.hasNextLine()) {

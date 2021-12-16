@@ -30,6 +30,7 @@ public class OrdersMenuController {
     }
     
     public static void parseOrderMenuChoice() {
+        System.out.println(Colours.ANSI_BLACK + "OMC.parseOrderMenuChoice() called. ");
         System.out.println(Colours.ANSI_RED + "Please choice an option..." + Colours.ANSI_RESET);
         switch (Integer.parseInt(new Scanner(System.in).nextLine())) {
             case 1:
@@ -40,7 +41,7 @@ public class OrdersMenuController {
                 ViewOrders.viewOrders();
                 displayOrdersMenu();
                 break;
-            case 3:
+            case 0:
                 MainMenuView.displayMenu();
             default:
                 System.out.println("Invalid input, please try again...");
