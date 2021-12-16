@@ -5,7 +5,6 @@ import StockFunctions.Colours;
 import MenusAndControllers.LoginController;
 import MenusAndControllers.MainMenuView;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class ViewAccount {
@@ -31,7 +30,7 @@ public class ViewAccount {
         
     }
     
-    public static void parseAccountChoice(int account) throws IOException {
+    public static void parseAccountChoice(int account){
         String[] properties = {"username", "password", "forename", "surname", "employee ID"};
         int propertyIndex = -1;
         switch (Integer.parseInt(new Scanner(System.in).nextLine())) {

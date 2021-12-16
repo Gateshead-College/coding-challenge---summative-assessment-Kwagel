@@ -9,29 +9,22 @@ import java.io.IOException;
 public class MainMenuController {
     
     public static void main(String[] args)throws IOException {
+//        Starting point
+//        Load accounts, stock, write stock to stocksRecord.txt
     LoginController.loadAccounts();
         LoadStock.loadStock();
         LoadStock.writeToRecord();
+//        display login screen
         LoginScreenView.displayLogin();
     }
     
-    public void parseChoice(int choice) throws IOException {
+    public void parseMainMenuChoice(int choice) {
         switch (choice){
             case 1:
-                ViewStock.displayStocks();
-                MainMenuView.displayMenu();
+                StocksMenuController.callStocksMenu();
             case 2:
-                UpdateItem.updateItem();
-                MainMenuView.displayMenu();
+                OrdersMenuController.callOrdersMenu();
             case 3:
-                AddNewItem.addItem();
-                MainMenuView.displayMenu();
-            case 4:
-                RemoveItem.removeItem();
-                MainMenuView.displayMenu();
-            case 5:
-                OrdersMenuController.loadOrdersMenu();
-            case 6:
                 ViewAccount.viewAccount(ViewAccount.getCurrentAccountIndex());
                 ViewAccount.viewAccountSettings();
                 ViewAccount.parseAccountChoice(ViewAccount.getCurrentAccountIndex());
