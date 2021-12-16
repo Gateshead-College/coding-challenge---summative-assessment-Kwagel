@@ -1,6 +1,7 @@
 package StockFunctions;
 
-import java.io.IOException;
+import MenusAndControllers.Colours;
+
 import java.util.Scanner;
 
 public class UpdateItem {

@@ -1,6 +1,6 @@
 package Models;
 
-import StockFunctions.Colours;
+import MenusAndControllers.Colours;
 import StockFunctions.LoadStock;
 
 public class Stock {

@@ -1,7 +1,5 @@
 package MenusAndControllers;
 
-import StockFunctions.Colours;
-
 public class StocksMenuView {
     public static void displayStockMenu(){
         System.out.println(Colours.ANSI_GREEN + "Stocks Menu");

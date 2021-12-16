@@ -1,6 +1,6 @@
 package AccountFunctions;
 
-import StockFunctions.Colours;
+import MenusAndControllers.Colours;
 
 import java.util.Scanner;
 

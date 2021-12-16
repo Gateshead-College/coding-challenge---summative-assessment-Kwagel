@@ -1,7 +1,5 @@
 package MenusAndControllers;
 
-import StockFunctions.Colours;
-
 import java.util.Scanner;
 
 public class MainMenuView {

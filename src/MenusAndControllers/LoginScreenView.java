@@ -1,7 +1,5 @@
 package MenusAndControllers;
 
-import StockFunctions.Colours;
-
 import java.io.IOException;
 import java.util.Scanner;
 

@@ -5,7 +5,6 @@ import Models.Order;
 import OrdersFunctions.CreateNewOrder;
 import OrdersFunctions.LoadCustomers;
 import OrdersFunctions.ViewOrders;
-import StockFunctions.Colours;
 
 import java.util.ArrayList;
 import java.util.Scanner;

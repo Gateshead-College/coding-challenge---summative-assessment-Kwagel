@@ -1,5 +1,7 @@
 package StockFunctions;
 
+import MenusAndControllers.Colours;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

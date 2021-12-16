@@ -1,6 +1,6 @@
 package StockFunctions;
 
-import java.io.IOException;
+import MenusAndControllers.Colours;
 
 public class RemoveItem {
     public static void removeItem()  {

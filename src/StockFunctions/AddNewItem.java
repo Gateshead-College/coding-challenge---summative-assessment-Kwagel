@@ -1,5 +1,6 @@
 package StockFunctions;
 
+import MenusAndControllers.Colours;
 import Models.Stock;
 
 import java.util.Scanner;

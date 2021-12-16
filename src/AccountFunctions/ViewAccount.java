@@ -1,7 +1,7 @@
 package AccountFunctions;
 
 import Models.Account;
-import StockFunctions.Colours;
+import MenusAndControllers.Colours;
 import MenusAndControllers.LoginController;
 import MenusAndControllers.MainMenuView;
 
@@ -26,11 +26,11 @@ public class ViewAccount {
         }
         System.out.println("0 - Return to Main Menu");
         System.out.println("-------------------");
-        System.out.println(Colours.ANSI_RED + "Please choose an option..." + Colours.ANSI_RESET);
         
     }
     
     public static void parseAccountChoice(int account){
+        System.out.println(Colours.ANSI_RED + "Please choose an option..." + Colours.ANSI_RESET);
         String[] properties = {"username", "password", "forename", "surname", "employee ID"};
         int propertyIndex = -1;
         switch (Integer.parseInt(new Scanner(System.in).nextLine())) {
