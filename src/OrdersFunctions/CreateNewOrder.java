@@ -4,7 +4,7 @@ import MenusAndControllers.OrdersMenuController;
 import Models.Order;
 import Models.OrderItem;
 import Models.Stock;
-import StockFunctions.Colours;
+import MenusAndControllers.Colours;
 import StockFunctions.LoadStock;
 import StockFunctions.ViewStock;
 

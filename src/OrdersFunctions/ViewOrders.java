@@ -1,10 +1,9 @@
 package OrdersFunctions;
 
 import MenusAndControllers.OrdersMenuController;
-import MenusAndControllers.OrdersMenuView;
 import Models.Order;
 import Models.OrderItem;
-import StockFunctions.Colours;
+import MenusAndControllers.Colours;
 
 import java.io.IOException;
 import java.util.Scanner;

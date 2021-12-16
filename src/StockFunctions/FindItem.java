@@ -1,5 +1,7 @@
 package StockFunctions;
 
+import MenusAndControllers.Colours;
+
 import java.util.Scanner;
 
 public class FindItem {

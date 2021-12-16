@@ -1,12 +1,13 @@
 package AccountFunctions;
 
-import StockFunctions.Colours;
+import MenusAndControllers.Colours;
 
 import java.util.Scanner;
 
 public class ChangeDetails {
     
     public static String changeDetails() {
+        System.out.println(Colours.ANSI_BLACK + "ChangeDetails.changeDetails() called. Will change details");
         System.out.println(Colours.ANSI_RED + "Enter new information...");
         String newDetails = new Scanner(System.in).nextLine();
         System.out.println("Please confirm by re-entering it...");

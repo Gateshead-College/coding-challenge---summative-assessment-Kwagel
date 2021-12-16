@@ -1,13 +1,11 @@
 package MenusAndControllers;
 
-import StockFunctions.Colours;
-
-import java.io.IOException;
 import java.util.Scanner;
 
 public class LoginScreenView {
     
-    public static void displayLogin() throws IOException {
+    public static void displayLogin()  {
+        System.out.println(Colours.ANSI_BLACK + "LSV.displayLogin() called. ");
         LoginController.loadAccounts();
         System.out.println(Colours.ANSI_PURPLE + "_____________________________");
         System.out.println(" ENTER USERNAME:");

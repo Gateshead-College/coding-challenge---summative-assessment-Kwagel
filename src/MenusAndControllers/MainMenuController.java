@@ -8,10 +8,10 @@ import java.io.IOException;
 
 public class MainMenuController {
     
-    public static void main(String[] args)throws IOException {
+    public static void main(String[] args) throws IOException {
 //        Starting point
 //        Load accounts, stock, write stock to stocksRecord.txt
-    LoginController.loadAccounts();
+        LoginController.loadAccounts();
         LoadStock.loadStock();
         LoadStock.writeToRecord();
 //        display login screen
@@ -19,15 +19,22 @@ public class MainMenuController {
     }
     
     public void parseMainMenuChoice(int choice) {
-        switch (choice){
+        System.out.println(Colours.ANSI_BLACK + "MMC.parseMainMenuChoice() called. ");
+        switch (choice) {
             case 1:
                 StocksMenuController.callStocksMenu();
+                break;
             case 2:
                 OrdersMenuController.callOrdersMenu();
+                break;
             case 3:
-                ViewAccount.viewAccount(ViewAccount.getCurrentAccountIndex());
-                ViewAccount.viewAccountSettings();
-                ViewAccount.parseAccountChoice(ViewAccount.getCurrentAccountIndex());
+                AccountsMenuController.callAccountsMenu();
+                break;
+            case 0:
+                System.out.println("Exiting...");
+                break;
+            default:
+                System.out.println("Invalid choice, please try again...");
                 MainMenuView.displayMenu();
         }
     }

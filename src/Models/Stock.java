@@ -1,6 +1,6 @@
 package Models;
 
-import StockFunctions.Colours;
+import MenusAndControllers.Colours;
 import StockFunctions.LoadStock;
 
 public class Stock {
@@ -63,17 +63,16 @@ public class Stock {
             switch (property) {
                 case "ID":
                     if (LoadStock.getStocks().get(i).getProductID() == Integer.parseInt(value)) {
-                    return i;
-                }
-                
+                        return i;
+                    }
                 case "name":
                     if (LoadStock.getStocks().get(i).getName().equals(value)) {
-                    return i;
-                }
+                        return i;
+                    }
                 case "price":
-                    if (LoadStock.getStocks().get(i).getPrice() == Integer.parseInt(value) ){
-                    return i;
-                }
+                    if (LoadStock.getStocks().get(i).getPrice() == Integer.parseInt(value)) {
+                        return i;
+                    }
                 default:
                 
             }
@@ -82,7 +81,7 @@ public class Stock {
     }
     
     public void addQuantity(int stockChange) {
-        if (numberInStock >= stockChange) {
+        if ((numberInStock + stockChange) >= 0) {
             this.numberInStock += stockChange;
             System.out.println(Colours.ANSI_BLUE + "Successfully changed number in stock!");
         } else {
